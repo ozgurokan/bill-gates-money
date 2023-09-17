@@ -1,6 +1,6 @@
 ## Bill Gates Money
 
-##### Bu proje [Patika](www.patika.dev)'in React Patikası kapsamında yaptığım redux ödevidir.
+##### Bu proje [Patika](https://www.patika.dev/tr)'in React Patikası kapsamında yaptığım redux ödevidir.
 
 ### Gereksinimler
 
