@@ -5,6 +5,8 @@ import NavBar from "./components/Navbar";
 import Header from "./components/Header";
 import Balance from "./components/Balance";
 import ProductList from "./components/ProductList";
+import Basket from "./components/Basket";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -19,8 +21,10 @@ function App() {
         <Header/>
         <Balance/>
         <ProductList/>
-      </div>
+        <Basket />
 
+      </div>
+      <Footer />
     </div>
   )
 }

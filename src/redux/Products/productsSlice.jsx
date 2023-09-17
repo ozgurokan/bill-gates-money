@@ -323,13 +323,28 @@ export const productsSlice = createSlice({
                 "amount": 0,
                 "img": "https://neal.fun/spend/images/nba-team.jpg"
             }
-        ]
+        ],
+        balance : 100000000000,
+        total : 0,
     },
     reducers: {
-      
+        buy : (state,action) => {
+            const item = state.products.find(element => element.product_id == action.payload)
+
+            item.amount+= 1;
+            state.balance -= item.product_price;
+            state.total += item.product_price;
+        },
+        sell : (state,action) => {
+            const item = state.products.find(element => element.product_id == action.payload)
+
+            item.amount -= 1;
+            state.balance += item.product_price;
+            state.total -= item.product_price;
+        }
     }
   })
   
-//   export const { increment, decrement, incrementByAmount } = counterSlice.actions
+  export const { buy,sell} = productsSlice.actions
   
   export default productsSlice.reducer

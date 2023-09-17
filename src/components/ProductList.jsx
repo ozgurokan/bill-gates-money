@@ -6,12 +6,13 @@ import Product from "./Product";
 function ProductList() {
   const products = useSelector((state) => state.products.products);
 
+
   return (
     <div className='productListWrapper'>
       <div className='productList'>
       {
         products.map((product) => {
-          return <Product id={product.id} name={product.product_name} amount={product.amount} price={product.product_price} imgLink={product.img}/>
+          return <Product key={product.product_id} product={product} />
         })
       }
       </div>
